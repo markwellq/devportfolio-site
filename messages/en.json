@@ -3,5 +3,17 @@
 		"home": "Home",
 		"projects": "Projects",
 		"stack": "Stack"
+	},
+	"home": {
+		"greeting": "Hi, I'm Denis 👋",
+		"title": "A front-end developer who loves clean code",
+		"description": "I build fast and polished user interfaces using React and Next.js.",
+		"cta": {
+			"projects": "View projects",
+			"contact": "Message me"
+		},
+		"stack": {
+			"title": "Stack"
+		}
 	}
 }
