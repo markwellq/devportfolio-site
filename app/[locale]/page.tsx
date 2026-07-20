@@ -1,17 +1,15 @@
-
-import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
-import { GithubLogoIcon } from "@phosphor-icons/react/ssr";
-import { ArrowRight, Mail } from "lucide-react";
+import {
+  BookOpenIcon,
+  GithubLogoIcon,
+  TelegramLogoIcon,
+} from "@phosphor-icons/react/ssr";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-const STACK = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Tailwind CSS",
-  "Node.js",
-  "PostgreSQL",
+const LINKS = [
+  { key: "content", label: "Content", href: "/projects", icon: BookOpenIcon, external: false },
+  { key: "github", label: "denisbekcev", href: "https://github.com/your-username", icon: GithubLogoIcon, external: true },
+  { key: "telegram", label: "@your_username", href: "https://t.me/your-username", icon: TelegramLogoIcon, external: true },
 ] as const;
 
 export default async function HomePage({
@@ -24,57 +22,48 @@ export default async function HomePage({
   const t = await getTranslations("home");
 
   return (
-    <>
-      <section className="mx-auto flex min-h-[calc(100vh-57px)] max-w-3xl flex-col justify-center gap-6 px-4 py-16 md:min-h-screen">
-        <p className="text-sm font-medium text-brand">
-          {t("greeting")}
-        </p>
-        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          {t("title")}
+    <section className="mx-auto max-w-3xl px-4 pt-16 sm:pt-24">
+      <div className="space-y-2">
+        <h1 className="text-2xl font-medium tracking-tight text-foreground sm:text-1xl">
+          Denis Beccev
         </h1>
-        <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
-          {t("description")}
+
+        <p className="text-lg font-medium text-muted-foreground">
+          Full Stack Web Developer
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 pt-2">
-          <Button nativeButton={false} render={<Link href="/projects" />}>
-            {t("cta.projects")}
-            <ArrowRight className="size-4" />
-          </Button>
-          <Button
-            nativeButton={false}
-            variant="outline"
-            render={<a href="mailto:hello@example.com" />}
-          >
-            <Mail className="size-4" />
-            {t("cta.contact")}
-          </Button>
-        </div>
+        <p className="max-w-lg text-sm leading-7 text-muted-foreground">
+          I build modern web applications with Laravel, Next.js, React and TypeScript,
+          focusing on performance, clean architecture and user experience.
+        </p>
+      </div>
 
-        <GithubLogoIcon size={32} />
 
-      </section >
-
-      <section
-        id="stack"
-        className="border-t border-border bg-surface px-4 py-16"
-      >
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-brand">
-            {t("stack.title")}
-          </h2>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {STACK.map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-border bg-background px-3 py-1 text-sm text-foreground"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+        {LINKS.map(({ key, label, href, icon: Icon, external }) =>
+          external ? (
+            <a
+              key={key}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 transition-colors hover:text-foreground"
+            >
+              <Icon size={16} />
+              {label}
+            </a>
+          ) : (
+            <Link
+              key={key}
+              href={href}
+              className="flex items-center gap-1.5 transition-colors hover:text-foreground"
+            >
+              <Icon size={16} />
+              {label}
+            </Link>
+          )
+        )}
+      </div>
+    </section >
   );
 }

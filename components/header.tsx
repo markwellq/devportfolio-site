@@ -3,9 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
     Sheet,
     SheetContent,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
+    SheetTrigger
 } from "@/components/ui/sheet";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -54,12 +52,16 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
 
 export function Header({ name }: { name: string }) {
     const [open, setOpen] = useState(false);
+    const pathname = usePathname();
+    const isHome = pathname === "/";
 
     return (
-        <header className="sticky top-0 z-40 flex md:hidden items-center justify-between border-b border-border bg-background/85 px-4 py-3 backdrop-blur">
-            <Link href="/" className="font-semibold text-foreground">
-                {name}
-            </Link>
+        <header
+            className={cn(
+                "sticky top-0 z-40 flex items-center justify-between border-b border-border bg-background/85 px-4 py-3 backdrop-blur",
+                isHome && "md:hidden"
+            )}
+        >
 
             <div className="flex items-center gap-2">
                 <LocaleSwitcher />
@@ -71,9 +73,6 @@ export function Header({ name }: { name: string }) {
                         <Menu className="size-5" />
                     </SheetTrigger>
                     <SheetContent side="right" className="w-64">
-                        <SheetHeader>
-                            <SheetTitle>{name}</SheetTitle>
-                        </SheetHeader>
                         <nav className="flex flex-col gap-4 px-4">
                             <NavLinks onNavigate={() => setOpen(false)} />
                         </nav>
