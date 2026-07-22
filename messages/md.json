@@ -1,7 +1,18 @@
 {
 	"nav": {
 		"home": "Acasă",
-		"projects": "Proiecte",
-		"stack": "Stack"
+		"projects": "Proiecte"
+	},
+	"home": {
+		"role": "Dezvoltator Web Full Stack",
+		"description": "Dezvolt aplicații web moderne, punând accent pe performanță, o arhitectură curată și o experiență excelentă pentru utilizatori.",
+		"title": "Un dezvoltator front-end pasionat de cod curat",
+		"cta": {
+			"projects": "Vezi proiectele",
+			"contact": "Contactează-mă"
+		},
+		"stack": {
+			"title": "Tehnologii"
+		}
 	}
 }

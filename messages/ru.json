@@ -1,19 +1,18 @@
 {
 	"nav": {
-		"home": "Home",
-		"projects": "Projects",
-		"stack": "Stack"
+		"home": "Главная",
+		"projects": "Проекты"
 	},
 	"home": {
-		"greeting": "Hi, I'm Denis 👋",
-		"title": "A front-end developer who loves clean code",
-		"description": "I build fast and polished user interfaces using React and Next.js.",
+		"role": "Full Stack веб-разработчик",
+		"description": "Создаю современные веб-приложения, уделяя особое внимание производительности, чистой архитектуре и удобному пользовательскому интерфейсу.",
+		"title": "Фронтенд-разработчик, который любит чистый код",
 		"cta": {
-			"projects": "View projects",
-			"contact": "Message me"
+			"projects": "Посмотреть проекты",
+			"contact": "Связаться со мной"
 		},
 		"stack": {
-			"title": "Stack"
+			"title": "Стек технологий"
 		}
 	}
 }

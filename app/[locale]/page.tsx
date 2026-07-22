@@ -1,15 +1,15 @@
 import { Link } from "@/i18n/navigation";
 import {
-  BookOpenIcon,
+  BookIcon,
   GithubLogoIcon,
-  TelegramLogoIcon,
+  TelegramLogoIcon
 } from "@phosphor-icons/react/ssr";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 const LINKS = [
-  { key: "content", label: "Content", href: "/projects", icon: BookOpenIcon, external: false },
-  { key: "github", label: "denisbekcev", href: "https://github.com/your-username", icon: GithubLogoIcon, external: true },
-  { key: "telegram", label: "@your_username", href: "https://t.me/your-username", icon: TelegramLogoIcon, external: true },
+  { key: "content", label: "my projects", href: "/projects", icon: BookIcon, external: false },
+  { key: "github", label: "markwellq", href: "https://github.com/your-username", icon: GithubLogoIcon, external: true },
+  { key: "telegram", label: "@markwellxd", href: "https://t.me/markwellxd", icon: TelegramLogoIcon, external: true },
 ] as const;
 
 export default async function HomePage({
@@ -24,22 +24,18 @@ export default async function HomePage({
   return (
     <section className="mx-auto max-w-3xl px-4 pt-16 sm:pt-24">
       <div className="space-y-2">
-        <h1 className="text-2xl font-medium tracking-tight text-foreground sm:text-1xl">
+        <h1 className="text-2xl font-medium tracking-tight text-main sm:text-1xl">
           Denis Beccev
         </h1>
-
-        <p className="text-lg font-medium text-muted-foreground">
-          Full Stack Web Developer
+        <p className="text-md text-tint">
+          {t("role")}
         </p>
-
-        <p className="max-w-lg text-sm leading-7 text-muted-foreground">
-          I build modern web applications with Laravel, Next.js, React and TypeScript,
-          focusing on performance, clean architecture and user experience.
+        <p className="max-w-lg text-sm leading-7 text-tint mt-10">
+          {t("description")}
         </p>
       </div>
 
-
-      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-main">
         {LINKS.map(({ key, label, href, icon: Icon, external }) =>
           external ? (
             <a
@@ -64,6 +60,6 @@ export default async function HomePage({
           )
         )}
       </div>
-    </section >
+    </section>
   );
 }

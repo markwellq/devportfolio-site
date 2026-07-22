@@ -9,6 +9,13 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Denis Beccev",
+  description: "Full Stack Web Developer",
+};
+
 export default async function LocaleLayout({
   children,
   params,
@@ -22,7 +29,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className="bg-background">
         <NextIntlClientProvider>
           <Header name="Denis Bekcev" />
           <main>{children}</main>
