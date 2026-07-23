@@ -1,3 +1,5 @@
+// app/[locale]/layout.tsx
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
@@ -29,10 +31,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className="bg-background">
+      <body className="flex min-h-screen flex-col bg-background">
         <NextIntlClientProvider>
-          <Header name="Denis Bekcev" />
-          <main>{children}</main>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

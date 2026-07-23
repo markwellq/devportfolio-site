@@ -1,12 +1,14 @@
 {
 	"nav": {
 		"home": "Home",
-		"projects": "Projects"
+		"projects": "Projects",
+		"stack": "Stack"
 	},
 	"home": {
 		"role": "Full Stack Web Developer",
 		"description": "I build modern web applications, focusing on performance, clean architecture and great user experience.",
 		"title": "A front-end developer who loves clean code",
+		"back": "back",
 		"cta": {
 			"projects": "View projects",
 			"contact": "Message me"
@@ -14,5 +16,10 @@
 		"stack": {
 			"title": "Stack"
 		}
+	},
+	"projects": {
+		"back": "back",
+		"title": "my projects",
+		"description": "description my"
 	}
 }

@@ -7,12 +7,14 @@
 	--background: #1c1c1c;
 	--color-main: #ffffff;
 	--color-tint: #8f8f8f;
+	--color-tinted: #3e3e3e;
 }
 
 @theme inline {
 	--color-background: var(--background);
 	--color-main: var(--color-main);
 	--color-tint: var(--color-tint);
+	--color-tinted: #3e3e3e;
 }
 
 body {

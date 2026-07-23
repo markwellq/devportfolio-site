@@ -1,3 +1,4 @@
+import { LocaleSwitcher } from "@/components/locale-switcher";
 import { Link } from "@/i18n/navigation";
 import {
   BookIcon,
@@ -6,9 +7,10 @@ import {
 } from "@phosphor-icons/react/ssr";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+
 const LINKS = [
   { key: "content", label: "my projects", href: "/projects", icon: BookIcon, external: false },
-  { key: "github", label: "markwellq", href: "https://github.com/your-username", icon: GithubLogoIcon, external: true },
+  { key: "github", label: "denoqcore", href: "https://github.com/denoqcore", icon: GithubLogoIcon, external: true },
   { key: "telegram", label: "@markwellxd", href: "https://t.me/markwellxd", icon: TelegramLogoIcon, external: true },
 ] as const;
 
@@ -24,9 +26,15 @@ export default async function HomePage({
   return (
     <section className="mx-auto max-w-3xl px-4 pt-16 sm:pt-24">
       <div className="space-y-2">
-        <h1 className="text-2xl font-medium tracking-tight text-main sm:text-1xl">
-          Denis Beccev
-        </h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-medium tracking-tight text-main">
+            Denis Beccev
+          </h1>
+
+          <div className='hidden sm:flex'>
+            <LocaleSwitcher />
+          </div>
+        </div>
         <p className="text-md text-tint">
           {t("role")}
         </p>
@@ -35,7 +43,7 @@ export default async function HomePage({
         </p>
       </div>
 
-      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-main">
+      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-tint">
         {LINKS.map(({ key, label, href, icon: Icon, external }) =>
           external ? (
             <a
@@ -43,7 +51,7 @@ export default async function HomePage({
               href={href}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 transition-colors hover:text-foreground"
+              className="flex items-center gap-1.5 transition-colors hover:text-main"
             >
               <Icon size={16} />
               {label}
@@ -52,7 +60,7 @@ export default async function HomePage({
             <Link
               key={key}
               href={href}
-              className="flex items-center gap-1.5 transition-colors hover:text-foreground"
+              className="flex items-center gap-1.5 transition-colors hover:text-main"
             >
               <Icon size={16} />
               {label}
