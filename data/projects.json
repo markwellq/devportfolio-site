@@ -1,0 +1,29 @@
+[
+	{
+		"slug": "project-one",
+		"title": "Project One",
+		"description": "description",
+		"stack": ["Next.js", "TypeScript", "Tailwind"],
+		"cover": "/projects/project-one/cover.jpg",
+		"screenshots": [
+			"/projects/project-one/1.jpg",
+			"/projects/project-one/2.jpg"
+		],
+		"youtubeUrl": "https://www.youtube.com/watch?v=xxxxxxx",
+		"demoUrl": "https://project-one.example.com",
+		"githubUrl": "https://github.com/your-username/project-one",
+		"content": "content description"
+	},
+	{
+		"slug": "project-two",
+		"title": "Project Two",
+		"description": "description",
+		"stack": ["Laravel", "PostgreSQL", "Vue"],
+		"cover": "/projects/project-two/cover.jpg",
+		"screenshots": ["/projects/project-two/1.jpg"],
+		"youtubeUrl": null,
+		"demoUrl": null,
+		"githubUrl": "https://github.com/your-username/project-two",
+		"content": "content description"
+	}
+]
