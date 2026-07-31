@@ -1,9 +1,9 @@
 [
 	{
-		"slug": "project-one",
-		"title": "Project One",
-		"description": "description",
-		"stack": ["Next.js", "TypeScript", "Tailwind"],
+		"slug": "rent-use",
+		"title": "rent use",
+		"description": "Rent platform",
+		"stack": ["Laravel", "mysql", "Tailwind"],
 		"cover": "/projects/project-one/cover.jpg",
 		"screenshots": [
 			"/projects/project-one/1.jpg",
@@ -16,9 +16,9 @@
 	},
 	{
 		"slug": "project-two",
-		"title": "Project Two",
-		"description": "description",
-		"stack": ["Laravel", "PostgreSQL", "Vue"],
+		"title": "Surv Gear",
+		"description": "Gear e-commerce",
+		"stack": ["Laravel", "MySQL", "javascript"],
 		"cover": "/projects/project-two/cover.jpg",
 		"screenshots": ["/projects/project-two/1.jpg"],
 		"youtubeUrl": null,
