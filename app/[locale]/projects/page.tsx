@@ -43,12 +43,7 @@ export default async function ProjectsPage({
                 </div>
 
                 <div className="p-5 sm:p-8">
-                    <p className="text-sm text-tint/70">
-                        <span className="text-main">denoqcore@site</span> ~ %{" "}
-                        <span className="text-main">cat</span> about.txt
-                    </p>
-
-                    <p className="mt-10 text-sm text-tint/70">
+                    <p className=" text-sm text-tint/70">
                         <span className="text-main">denoqcore@site</span> ~ %{" "}
                         <span className="text-main">ls</span> -la ./projects
                     </p>

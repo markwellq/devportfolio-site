@@ -3,11 +3,15 @@
 		"slug": "rent-use",
 		"title": "rent use",
 		"description": "Rent platform",
-		"stack": ["Laravel", "mysql", "Tailwind"],
-		"cover": "/projects/project-one/cover.jpg",
+		"stack": ["Laravel", "MySQL", "Tailwind"],
+		"cover": "/projects/rent-use/rent-use-cover.jpg",
 		"screenshots": [
-			"/projects/project-one/1.jpg",
-			"/projects/project-one/2.jpg"
+			"/projects/rent-use/maket1.jpg",
+			"/projects/rent-use/maket2.jpg",
+			"/projects/rent-use/maket3.jpg",
+			"/projects/rent-use/maket4.png",
+			"/projects/rent-use/maket0.png",
+			"/projects/rent-use/maket7.png"
 		],
 		"youtubeUrl": "https://www.youtube.com/watch?v=xxxxxxx",
 		"demoUrl": "https://project-one.example.com",
