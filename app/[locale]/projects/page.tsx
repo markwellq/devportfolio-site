@@ -16,7 +16,7 @@ export default async function ProjectsPage({
     const projects = getAllProjects();
 
     return (
-        <section className="mx-auto max-w-3xl px-4 pt-20 pb-28 font-mono sm:pt-28">
+        <section className="mx-auto max-w-5xl px-4 pt-20 pb-28 font-mono sm:pt-28">
             <div className="flex items-center justify-between">
                 <Link
                     href="/"
@@ -60,25 +60,28 @@ export default async function ProjectsPage({
                                 href={`/projects/${project.slug}`}
                                 className="group block"
                             >
-                                <div className="-mx-3 flex flex-col gap-2 rounded-md border-b border-line px-3 py-4 transition-colors hover:bg-tinted/60 sm:flex-row sm:items-center sm:gap-4 sm:py-4">
-                                    <div className="flex flex-1 flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4 sm:min-w-0">
-                                        <span className="text-tint/40">
-                                            {String(i + 1).padStart(2, "0")}
-                                        </span>
-                                        <span className="font-medium text-main">
-                                            {project.title}
-                                        </span>
-                                        <span className="text-tint/70 sm:min-w-0 sm:flex-1 sm:truncate">
-                                            # {project.description}
+                                <div className="-mx-3 flex flex-col gap-3 rounded-md border-b border-line px-3 py-5 transition-colors hover:bg-tinted/60">
+                                    <div className="flex items-start justify-between gap-4">
+                                        <div className="flex items-baseline gap-3">
+                                            <span className="text-tint/40">
+                                                {String(i + 1).padStart(2, "0")}
+                                            </span>
+                                            <span className="text-base font-medium text-main">
+                                                {project.title}
+                                            </span>
+                                        </div>
+
+                                        <span className="shrink-0 text-xs tracking-[0.3em] text-tint/40">
+                                            ..
                                         </span>
                                     </div>
 
-                                    <div className="shrink-0 pl-9 sm:pl-0 flex gap-2 items-center">
-                                        <TechStack stack={project.stack} />
+                                    <p className="pl-9 text-sm leading-relaxed text-tint/70">
+                                        # {project.description}
+                                    </p>
 
-                                        <span className="ml-1 text-xs tracking-[0.3em] text-tint/40">
-                                            ..
-                                        </span>
+                                    <div className="pl-9">
+                                        <TechStack stack={project.stack} />
                                     </div>
                                 </div>
 
