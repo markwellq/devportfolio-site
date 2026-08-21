@@ -66,9 +66,9 @@ export default async function ProjectPage({
 
             <div className="mt-8 overflow-hidden rounded-lg border border-line font-mono">
                 <div className="flex items-center gap-1.5 border-b border-line bg-tinted/40 px-4 py-3">
-                    <span className="h-2.5 w-2.5 rounded-full bg-tint/30" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-tint/30" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-tint/30" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]/70" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]/70" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]/70" />
                     <span className="ml-2 text-xs text-tint/60">
                         {project.slug}.json — zsh
                     </span>

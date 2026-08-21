@@ -43,7 +43,7 @@ export default async function HomePage({
         </p>
       </div>
 
-      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-tint">
+      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-tint">
         {LINKS.map(({ key, label, href, icon: Icon, external }) =>
           external ? (
             <a
@@ -60,10 +60,13 @@ export default async function HomePage({
             <Link
               key={key}
               href={href}
-              className="flex items-center gap-1.5 transition-colors hover:text-main"
+              className="group flex items-center gap-1.5 rounded-md border border-line bg-main px-3 py-1.5 text-background transition-all duration-200 hover:bg-main/90"
             >
               <Icon size={16} />
               {label}
+              <span className="ml-0.5 transition-transform duration-200 group-hover:translate-x-0.5">
+                →
+              </span>
             </Link>
           )
         )}

@@ -15,8 +15,8 @@ import { useEffect, useState } from "react";
 
 const labels: Record<string, string> = {
   en: "EN",
-  ro: "MD",
   ru: "RU",
+  ro: "MD",
 };
 
 export function LocaleSwitcher() {
@@ -49,7 +49,7 @@ export function LocaleSwitcher() {
       <SelectContent
         align="end"
         alignItemWithTrigger={false}
-        className="min-w-24 rounded-xl border border-tinted/60 bg-background p-1 shadow-lg"
+        className="min-w-24 rounded-xl border border-tinted/60 bg-background p-1"
       >
         {routing.locales.map((l) => (
           <SelectItem
