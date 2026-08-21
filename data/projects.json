@@ -1,18 +1,35 @@
 [
 	{
 		"slug": "rent-use",
-		"title": "rent use",
-		"description": "Rent platform",
-		"stack": ["Laravel", "mysql", "Tailwind"],
-		"cover": "/projects/project-one/cover.jpg",
+		"title": "Rent Use",
+		"description": "Rental and booking platform for finding, renting, and managing listings.",
+		"stack": [
+			"Docker",
+			"Laravel",
+			"PHP",
+			"MySQL",
+			"Livewire",
+			"javascript",
+			"Alpine",
+			"Tailwind",
+			"Redis",
+			"Stripe",
+			"git",
+			"Octane"
+		],
+		"cover": "/projects/rent-use/rent-use-cover.jpg",
 		"screenshots": [
-			"/projects/project-one/1.jpg",
-			"/projects/project-one/2.jpg"
+			"/projects/rent-use/maket1.jpg",
+			"/projects/rent-use/maket2.jpg",
+			"/projects/rent-use/maket3.jpg",
+			"/projects/rent-use/maket4.png",
+			"/projects/rent-use/maket0.png",
+			"/projects/rent-use/maket7.png"
 		],
 		"youtubeUrl": "https://www.youtube.com/watch?v=xxxxxxx",
 		"demoUrl": "https://project-one.example.com",
 		"githubUrl": "https://github.com/your-username/project-one",
-		"content": "content description"
+		"content": "Rent Use is a full-stack rental and booking platform built with Laravel. Users can browse listings, search by category and location, view detailed property information, add listings to favorites, and make bookings. The platform also includes user profiles, listing management, photo galleries, subscriptions, and payment integration."
 	},
 	{
 		"slug": "project-two",

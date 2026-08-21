@@ -1,9 +1,29 @@
-import { EnvelopeIcon, GithubLogoIcon, XLogoIcon } from "@phosphor-icons/react/ssr";
+import {
+    EnvelopeIcon,
+    GithubLogoIcon,
+    XLogoIcon,
+} from "@phosphor-icons/react/ssr";
+import Image from "next/image";
 
 const SOCIALS = [
-    { key: "github", label: "markwellq", href: "https://github.com/markwellq", icon: GithubLogoIcon },
-    { key: "x", label: "@denoqcore", href: "https://x.com/denoqcore", icon: XLogoIcon },
-    { key: "mail", label: "deni.core@icloud.com", href: "mailto:deni.core@icloud.com", icon: EnvelopeIcon },
+    {
+        key: "github",
+        label: "markwellq",
+        href: "https://github.com/markwellq",
+        icon: GithubLogoIcon,
+    },
+    {
+        key: "x",
+        label: "@denoqcore",
+        href: "https://x.com/denoqcore",
+        icon: XLogoIcon,
+    },
+    {
+        key: "mail",
+        label: "deni.core@icloud.com",
+        href: "mailto:deni.core@icloud.com",
+        icon: EnvelopeIcon,
+    },
 ] as const;
 
 export function Footer() {
@@ -22,6 +42,16 @@ export function Footer() {
                         {label}
                     </a>
                 ))}
+            </div>
+
+            <div className="mt-8 flex justify-center">
+                <Image
+                    src="/logo-d.png"
+                    alt="Denis Beccev"
+                    width={64}
+                    height={64}
+                    className="opacity-60 transition-opacity hover:opacity-100"
+                />
             </div>
         </footer>
     );
