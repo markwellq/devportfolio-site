@@ -49,60 +49,68 @@ export default async function ProjectsPage({
                     </p>
 
                     <div className="mt-5 flex flex-col gap-1">
-                        {projects.map((project, i) => (
-                            <Link
-                                key={project.slug}
-                                href={`/projects/${project.slug}`}
-                                className="group block"
-                            >
-                                <div className="-mx-3 flex flex-col gap-3 rounded-md border-b border-line px-3 py-5 transition-colors hover:bg-tinted/60">
-                                    <div className="flex items-start justify-between gap-4">
-                                        <div className="flex items-baseline gap-3">
-                                            <span className="text-tint/40">
-                                                {String(i + 1).padStart(2, "0")}
-                                            </span>
-                                            <span className="text-base font-medium text-main">
-                                                {project.title}
-                                            </span>
-                                        </div>
+                        {projects.map((project, i) => {
+                            const visibleStack = project.stack.slice(0, 3);
+                            const hiddenCount = project.stack.length - visibleStack.length;
 
-                                        <span className="shrink-0 text-xs tracking-[0.3em] text-tint/40">
-                                            ..
-                                        </span>
-                                    </div>
-
-                                    <p className="pl-9 text-sm leading-relaxed text-tint/70">
-                                        # {project.description}
-                                    </p>
-
-                                    <div className="pl-9">
-                                        <TechStack stack={project.stack} />
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-rows-[0fr] overflow-hidden transition-[grid-template-rows] duration-300 ease-out group-hover:grid-rows-[1fr]">
-                                    <div className="min-h-0">
-                                        <div className="my-3 flex items-center gap-4 rounded-md border border-line bg-background p-3">
-                                            <div className="relative aspect-video w-36 shrink-0 overflow-hidden rounded border border-line bg-tinted sm:w-44">
-                                                <Image
-                                                    src={project.cover}
-                                                    alt={project.title}
-                                                    fill
-                                                    sizes="176px"
-                                                    className="object-cover"
-                                                />
+                            return (
+                                <Link
+                                    key={project.slug}
+                                    href={`/projects/${project.slug}`}
+                                    className="group block"
+                                >
+                                    <div className="-mx-3 flex flex-col gap-3 rounded-md border-b border-line px-3 py-5 transition-colors hover:bg-tinted/60">
+                                        <div className="flex items-start justify-between gap-4">
+                                            <div className="flex items-baseline gap-3">
+                                                <span className="text-tint/40">
+                                                    {String(i + 1).padStart(2, "0")}
+                                                </span>
+                                                <span className="text-base font-medium text-main">
+                                                    {project.title}
+                                                </span>
                                             </div>
-                                            <p className="text-xs leading-5 text-tint/60">
-                                                <span className="text-main">
-                                                    cat
-                                                </span>{" "}
-                                                {project.slug}.png
-                                            </p>
+
+                                            <span className="shrink-0 text-xs tracking-[0.3em] text-tint/40">
+                                                ..
+                                            </span>
+                                        </div>
+
+                                        <p className="pl-9 text-sm leading-relaxed text-tint/70">
+                                            # {project.description}
+                                        </p>
+
+                                        <div className="flex items-center gap-2 pl-9">
+                                            <TechStack stack={visibleStack} />
+                                            {hiddenCount > 0 && (
+                                                <span className="text-xs text-tint/40">
+                                                    +{hiddenCount}
+                                                </span>
+                                            )}
                                         </div>
                                     </div>
-                                </div>
-                            </Link>
-                        ))}
+
+                                    <div className="grid grid-rows-[0fr] overflow-hidden transition-[grid-template-rows] duration-300 ease-out group-hover:grid-rows-[1fr]">
+                                        <div className="min-h-0">
+                                            <div className="my-3 flex items-center gap-4 rounded-md border border-line bg-background p-3">
+                                                <div className="relative aspect-video w-36 shrink-0 overflow-hidden rounded border border-line bg-tinted sm:w-44">
+                                                    <Image
+                                                        src={project.cover}
+                                                        alt={project.title}
+                                                        fill
+                                                        sizes="176px"
+                                                        className="object-cover"
+                                                    />
+                                                </div>
+                                                <p className="text-xs leading-5 text-tint/60">
+                                                    <span className="text-main">cat</span>{" "}
+                                                    {project.slug}.png
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            );
+                        })}
                     </div>
 
                     <p className="mt-6 text-sm text-tint/70">
