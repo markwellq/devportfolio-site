@@ -43,7 +43,7 @@ export function ProjectGallery({
                         alt={alt}
                         fill
                         sizes="(min-width: 640px) 50vw, 100vw"
-                        className="object-cover transition-transform duration-300 hover:scale-[1.02]"
+                        className="object-cover transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
                         priority
                     />
                 </button>
@@ -59,7 +59,7 @@ export function ProjectGallery({
                             alt={`${alt} ${i + 2}`}
                             fill
                             sizes="25vw"
-                            className="object-cover transition-transform duration-300 hover:scale-[1.02]"
+                            className="object-cover transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
                         />
                         {i === rest.length - 1 && remaining > 0 && (
                             <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-lg font-medium text-white">
@@ -70,7 +70,7 @@ export function ProjectGallery({
                 ))}
                 <button
                     onClick={() => openAt(0)}
-                    className="absolute right-4 bottom-4 flex items-center gap-1.5 rounded-lg border border-line bg-background px-3 py-2 text-xs font-medium text-main shadow-sm transition-colors hover:bg-tinted"
+                    className="absolute right-4 bottom-4 flex items-center gap-1.5 rounded-sm bg-background px-3 py-2 text-xs font-medium text-main shadow-sm transition-colors hover:bg-tinted cursor-pointer"
                 >
                     <SquaresFourIcon size={14} weight="fill" />
                     {t("show-all")}· {images.length}

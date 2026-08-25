@@ -48,8 +48,8 @@ export function Footer() {
                 <Image
                     src="/logo-d.png"
                     alt="Denis Beccev"
-                    width={64}
-                    height={64}
+                    width={42}
+                    height={42}
                     className="opacity-60  hover:opacity-100 hover:scale-105 transition-all"
                 />
             </div>
