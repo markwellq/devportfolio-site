@@ -21,7 +21,7 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("home");
+  const t = await getTranslations("main");
 
   return (
     <section className="mx-auto max-w-3xl px-4 pt-16 sm:pt-24">

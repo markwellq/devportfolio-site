@@ -1,10 +1,5 @@
 {
-	"nav": {
-		"home": "Acasă",
-		"projects": "Proiecte",
-		"stack": "Stack"
-	},
-	"home": {
+	"main": {
 		"role": "Dezvoltator Web Full Stack",
 		"description": "Construiesc aplicații web moderne, concentrându-mă pe performanță, arhitectură curată și o experiență excelentă pentru utilizatori.",
 		"title": "Un dezvoltator front-end pasionat de cod curat",
@@ -15,11 +10,23 @@
 		},
 		"stack": {
 			"title": "Tehnologii"
-		}
+		},
+		"show-all": "Arată tot "
 	},
+
 	"projects": {
 		"back": "înapoi",
 		"title": "proiectele mele",
-		"description": "descrierea mea"
+		"description": "descrierea mea",
+
+		"rent-use": {
+			"description": "Platformă pentru găsirea, închirierea și rezervarea proprietăților.",
+			"content": "Rent Use este o platformă full-stack pentru închiriere și rezervare, construită cu Laravel. Utilizatorii pot naviga prin anunțuri, pot căuta după categorie și locație, pot vedea informații detaliate, pot adăuga anunțuri la favorite și pot face rezervări."
+		},
+
+		"project-two": {
+			"description": "Platformă e-commerce pentru echipamente.",
+			"content": "O platformă e-commerce pentru vânzarea echipamentelor pentru supraviețuire și activități în aer liber."
+		}
 	}
 }

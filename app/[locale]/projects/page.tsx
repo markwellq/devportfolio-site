@@ -20,7 +20,7 @@ export default async function ProjectsPage({
             <div className="flex items-center justify-between">
                 <Link
                     href="/"
-                    className="text-sm text-tint transition-colors hover:text-main"
+                    className="text-lg text-tint transition-colors hover:text-main"
                 >
                     <span className="text-main">denoqcore@site</span>
                     <span className="text-tint/60"> ~ % </span>
@@ -76,7 +76,7 @@ export default async function ProjectsPage({
                                         </div>
 
                                         <p className="pl-9 text-sm leading-relaxed text-tint/70">
-                                            # {project.description}
+                                            # {t(`${project.slug}.description`)}
                                         </p>
 
                                         <div className="flex items-center gap-2 pl-9">
@@ -114,8 +114,8 @@ export default async function ProjectsPage({
                     </div>
 
                     <p className="mt-6 text-sm text-tint/70">
-                        <span className="text-main">denoqcore@site</span> ~ %{" "}
-                        <span className="inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-main align-middle" />
+                        <span className="text-main">denoqcore@site\</span> ~ %{" "}
+                        <span className="inline-block h-4 w-1 translate-y-0.5 animate-blink bg-main align-middle mb-1" />
                     </p>
                 </div>
             </div>

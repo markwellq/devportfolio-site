@@ -1,10 +1,5 @@
 {
-	"nav": {
-		"home": "Home",
-		"projects": "Projects",
-		"stack": "Stack"
-	},
-	"home": {
+	"main": {
 		"role": "Full Stack Web Developer",
 		"description": "I build modern web applications, focusing on performance, clean architecture and great user experience.",
 		"title": "A front-end developer who loves clean code",
@@ -15,11 +10,23 @@
 		},
 		"stack": {
 			"title": "Stack"
-		}
+		},
+		"show-all": "Show all "
 	},
+
 	"projects": {
 		"back": "back",
 		"title": "my projects",
-		"description": "description my"
+		"description": "description my",
+
+		"rent-use": {
+			"description": "Rental and booking platform for finding, renting, and managing listings.",
+			"content": "Rent Use is a full-stack rental and booking platform built with Laravel. Users can browse listings, search by category and location, view detailed property information, add listings to favorites, and make bookings."
+		},
+
+		"project-two": {
+			"description": "Gear e-commerce platform.",
+			"content": "An e-commerce platform for selling survival and outdoor gear."
+		}
 	}
 }
