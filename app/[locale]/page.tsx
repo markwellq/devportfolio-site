@@ -2,16 +2,22 @@ import { LocaleSwitcher } from "@/components/locale-switcher";
 import { Link } from "@/i18n/navigation";
 import {
   BookIcon,
+  CertificateIcon,
+  FileTextIcon,
   GithubLogoIcon,
-  TelegramLogoIcon
+  TelegramLogoIcon,
 } from "@phosphor-icons/react/ssr";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-
 
 const LINKS = [
   { key: "content", label: "my projects", href: "/projects", icon: BookIcon, external: false },
   { key: "github", label: "denoqcore", href: "https://github.com/denoqcore", icon: GithubLogoIcon, external: true },
   { key: "telegram", label: "@markwellxd", href: "https://t.me/markwellxd", icon: TelegramLogoIcon, external: true },
+] as const;
+
+const DOCS = [
+  { key: "diploma", label: "diploma", href: "/diploma", icon: CertificateIcon, external: false },
+  { key: "cv", label: "cv", href: "CV/CV_Beccev_Denis.pdf", icon: FileTextIcon, external: true },
 ] as const;
 
 export default async function HomePage({
@@ -21,7 +27,7 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("home");
+  const t = await getTranslations("main");
 
   return (
     <section className="mx-auto max-w-3xl px-4 pt-16 sm:pt-24">
@@ -31,14 +37,12 @@ export default async function HomePage({
             Denis Beccev
           </h1>
 
-          <div className='hidden sm:flex'>
+          <div className="hidden sm:flex">
             <LocaleSwitcher />
           </div>
         </div>
-        <p className="text-md text-tint">
-          {t("role")}
-        </p>
-        <p className="max-w-lg text-sm leading-7 text-tint mt-10">
+        <p className="text-md text-tint">{t("role")}</p>
+        <p className="mt-10 max-w-lg text-sm leading-7 text-tint">
           {t("description")}
         </p>
       </div>
@@ -71,6 +75,32 @@ export default async function HomePage({
           )
         )}
       </div>
-    </section>
+
+      <div className="mt-auto flex flex-wrap items-center justify-center gap-x-3 gap-y-3 pt-84 pb-4 text-sm text-tint">
+        {DOCS.map(({ key, label, href, icon: Icon, external }) =>
+          external ? (
+            <a
+              key={key}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 transition-colors hover:border-main hover:text-main"
+            >
+              <Icon size={16} />
+              {label}
+            </a>
+          ) : (
+            <Link
+              key={key}
+              href={href}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 transition-colors hover:border-main hover:text-main"
+            >
+              <Icon size={16} />
+              {label}
+            </Link>
+          )
+        )}
+      </div>
+    </section >
   );
 }
