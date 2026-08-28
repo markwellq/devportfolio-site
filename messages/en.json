@@ -14,6 +14,7 @@
 		"back": "back",
 		"title": "my projects",
 		"description": "description my",
+		"disclaimer": "some projects are concepts / educational / demo — not production software",
 
 		"rent-use": {
 			"description": "Rental and booking platform for finding, renting, and managing listings.",
@@ -24,5 +25,12 @@
 			"description": "Gear e-commerce platform.",
 			"content": "An e-commerce platform for selling survival and outdoor gear."
 		}
+	},
+
+	"diplom": {
+		"back": "back",
+		"surname": "Surname",
+		"code": "Diploma code",
+		"verify": "Verify"
 	}
 }

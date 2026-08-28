@@ -14,9 +14,9 @@ import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
 const labels: Record<string, string> = {
-  en: "EN",
-  ru: "RU",
-  ro: "MD",
+  en: "english",
+  ro: "romania",
+  ru: "russian",
 };
 
 export function LocaleSwitcher() {

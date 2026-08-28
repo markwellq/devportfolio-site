@@ -32,6 +32,10 @@ export default async function ProjectsPage({
                 </div>
             </div>
 
+            <p className="mt-3 pl-0 text-xs text-tint/40 sm:pl-0">
+                # {t("disclaimer")}
+            </p>
+
             <div className="mt-8 overflow-hidden rounded-lg border border-line">
                 <div className="flex items-center gap-1.5 border-b border-line bg-tinted/40 px-4 py-3">
                     <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]/70" />
@@ -114,7 +118,7 @@ export default async function ProjectsPage({
                     </div>
 
                     <p className="mt-6 text-sm text-tint/70">
-                        <span className="text-main">denoqcore@site\</span> ~ %{" "}
+                        <span className="text-main">denoqcore@site</span> ~ %{" "}
                         <span className="inline-block h-4 w-1 translate-y-0.5 animate-blink bg-main align-middle mb-1" />
                     </p>
                 </div>

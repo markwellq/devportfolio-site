@@ -15,7 +15,7 @@ export default async function DiplomaPage({
     const { locale } = await params;
     setRequestLocale(locale);
 
-    const t = await getTranslations("main");
+    const t = await getTranslations("diplom");
 
     return (
         <section className="mx-auto max-w-3xl px-4 pt-20 pb-28 sm:pt-28">
@@ -53,15 +53,15 @@ export default async function DiplomaPage({
 
                     <div className="mt-6 space-y-1.5 text-sm">
                         <p className="text-tint/80">
-                            <span className="text-tint/50">"code":</span>{" "}
+                            <span className="text-tint/50">{t('code')}:</span>{" "}
                             <span className="text-main">"{DIPLOMA_CODE}"</span>
                         </p>
                         <p className="text-tint/80">
-                            <span className="text-tint/50">"surname":</span>{" "}
+                            <span className="text-tint/50">{t('surname')}:</span>{" "}
                             <span className="text-main">"Beccev Denis"</span>
                         </p>
                         <p className="text-tint/80">
-                            <span className="text-tint/50">"verify":</span>{" "}
+                            <span className="text-tint/50">{t('verify')}:</span>{" "}
                             <a
                                 href={VERIFY_URL}
                                 target="_blank"

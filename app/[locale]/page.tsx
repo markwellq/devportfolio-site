@@ -17,7 +17,7 @@ const LINKS = [
 
 const DOCS = [
   { key: "diploma", label: "diploma", href: "/diploma", icon: CertificateIcon, external: false },
-  { key: "CV", label: "cv", href: "/resume.pdf", icon: FileTextIcon, external: true },
+  { key: "cv", label: "cv", href: "CV/CV_Beccev_Denis.pdf", icon: FileTextIcon, external: true },
 ] as const;
 
 export default async function HomePage({
@@ -30,7 +30,7 @@ export default async function HomePage({
   const t = await getTranslations("main");
 
   return (
-    <section className="mx-auto flex min-h-[70vh] max-w-3xl flex-col px-4 pt-16 sm:pt-24">
+    <section className="mx-auto max-w-3xl px-4 pt-16 sm:pt-24">
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-medium tracking-tight text-main">
@@ -76,20 +76,31 @@ export default async function HomePage({
         )}
       </div>
 
-      <div className="mt-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pt-16 pb-4 text-md text-tint">
-        {DOCS.map(({ key, label, href, icon: Icon, external }) => (
-          <a
-            key={key}
-            href={href}
-            target={external ? "_blank" : undefined}
-            rel={external ? "noreferrer" : undefined}
-            className="flex items-center gap-1.5 transition-colors hover:text-main"
-          >
-            <Icon size={16} />
-            {label}
-          </a>
-        ))}
+      <div className="mt-auto flex flex-wrap items-center justify-center gap-x-3 gap-y-3 pt-84 pb-4 text-sm text-tint">
+        {DOCS.map(({ key, label, href, icon: Icon, external }) =>
+          external ? (
+            <a
+              key={key}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 transition-colors hover:border-main hover:text-main"
+            >
+              <Icon size={16} />
+              {label}
+            </a>
+          ) : (
+            <Link
+              key={key}
+              href={href}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 transition-colors hover:border-main hover:text-main"
+            >
+              <Icon size={16} />
+              {label}
+            </Link>
+          )
+        )}
       </div>
-    </section>
+    </section >
   );
 }
