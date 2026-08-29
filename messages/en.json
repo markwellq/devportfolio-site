@@ -7,7 +7,10 @@
 		"stack": {
 			"title": "Stack"
 		},
-		"show-all": "Show all "
+		"show-all": "Show all ",
+		"content": "my projects",
+		"availableStatus": "available for work — {location}",
+		"unavailableStatus": "not available right now — {location}"
 	},
 
 	"projects": {

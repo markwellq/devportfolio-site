@@ -1,7 +1,7 @@
 [
 	{
 		"slug": "rent-use",
-		"title": "Rent Use",
+		"title": "Rent Use & Booking Platform",
 		"stack": [
 			"Docker",
 			"Laravel",
@@ -29,11 +29,23 @@
 			"/projects/rent-use/screen9.jpg"
 		],
 		"youtubeUrl": "www",
-		"demoUrl": "www",
+		"demoUrl": null,
 		"githubUrl": "https://github.com/markwellq/rent-use"
 	},
 	{
 		"slug": "project-two",
+		"title": "Surv Gear",
+		"description": "Gear e-commerce",
+		"stack": ["Laravel", "MySQL", "javascript"],
+		"cover": "/projects/project-two/cover.jpg",
+		"screenshots": ["/projects/project-two/1.jpg"],
+		"youtubeUrl": null,
+		"demoUrl": null,
+		"githubUrl": "https://github.com/your-username/project-two",
+		"content": "content description"
+	},
+	{
+		"slug": "project-three",
 		"title": "Surv Gear",
 		"description": "Gear e-commerce",
 		"stack": ["Laravel", "MySQL", "javascript"],
