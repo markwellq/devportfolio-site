@@ -43,17 +43,5 @@
 		"demoUrl": null,
 		"githubUrl": "https://github.com/your-username/project-two",
 		"content": "content description"
-	},
-	{
-		"slug": "project-three",
-		"title": "Surv Gear",
-		"description": "Gear e-commerce",
-		"stack": ["Laravel", "MySQL", "javascript"],
-		"cover": "/projects/project-two/cover.jpg",
-		"screenshots": ["/projects/project-two/1.jpg"],
-		"youtubeUrl": null,
-		"demoUrl": null,
-		"githubUrl": "https://github.com/your-username/project-two",
-		"content": "content description"
 	}
 ]

@@ -8,7 +8,9 @@
 			"title": "Стек"
 		},
 		"show-all": "Показать все",
-		"content": "мои проекты"
+		"content": "мои проекты",
+		"availableStatus": "открыт к предложениям — {location}",
+		"unavailableStatus": "сейчас недоступен — {location}"
 	},
 
 	"projects": {

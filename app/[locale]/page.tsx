@@ -41,7 +41,7 @@ export default async function HomePage({
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-medium tracking-tight text-main">
-            Denis Beccev
+            Hello, i'm Denis Beccev
           </h1>
 
           <div className="hidden sm:flex">
@@ -54,7 +54,7 @@ export default async function HomePage({
           <span className="text-tint/50">/</span>
           <span className="flex items-center justify-center gap-1.5">
             <span
-              className={`h-3 w-1 rounded-sm ${available ? "bg-[#07821a]" : "bg-[#ff5f57]"
+              className={`h-2.5 w-2.5 rounded-full border-2 ${available ? "border-[#07821a]" : "border-[#ff5f57]"
                 }`}
             />
             {t(available ? "availableStatus" : "unavailableStatus", { location })}
