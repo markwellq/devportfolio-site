@@ -1,6 +1,6 @@
 "use client";
 
-import { TechStack } from "@/components/tech-stack";
+import { TechStackTerminal } from "@/components/tech-stack-terminal";
 import {
     Dialog,
     DialogContent,
@@ -8,16 +8,6 @@ import {
 } from "@/components/ui/dialog";
 import { TerminalWindowIcon } from "@phosphor-icons/react/dist/csr/TerminalWindow";
 import { useState } from "react";
-
-const STACK_CATEGORIES = [
-    { label: "frontend", items: ["react", "nextjs", "typescript", "tailwind"] },
-    { label: "backend", items: ["laravel", "php", "redis", "octane"] },
-    { label: "devtools", items: ["docker", "git", "stripe"] },
-] as const;
-
-interface TechStackProps {
-    stack: readonly string[];
-}
 
 export function TechStackDialog() {
     const [open, setOpen] = useState(false);
@@ -39,25 +29,11 @@ export function TechStackDialog() {
                     <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
                     <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
                     <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-                    <span className="ml-2 text-xs text-tint">stack.json</span>
+                    <span className="mx-auto -ml-6 text-xs text-tint">Tech Stack</span>
                 </div>
 
-                <div className="max-h-[70vh] overflow-y-auto px-5 py-4 font-mono text-sm">
-                    <p className="text-main">
-                        denoqcore@site <span className="text-tint">~</span> %{" "}
-                        <span className="text-tint">show tech stack</span>
-                    </p>
-
-                    <div className="mt-4 space-y-4">
-                        {STACK_CATEGORIES.map(({ label, items }) => (
-                            <div key={label}>
-                                <p className="mb-1.5 text-xs uppercase tracking-wide text-tint/70">
-                                    {label}
-                                </p>
-                                <TechStack stack={items} />
-                            </div>
-                        ))}
-                    </div>
+                <div className="max-h-[70vh] overflow-y-auto px-5 py-4">
+                    <TechStackTerminal />
                 </div>
             </DialogContent>
         </Dialog>
