@@ -8,16 +8,36 @@ export const STACK_CATEGORIES = [
 	{
 		key: 'frontend',
 		label: 'Frontend',
-		items: ['react', 'nextjs', 'typescript', 'tailwind'],
+		items: ['React', 'Next.js', 'Typescript', 'Alpine.js'],
 	},
 	{
 		key: 'backend',
 		label: 'Backend',
-		items: ['laravel', 'php', 'redis', 'octane'],
+		items: ['Laravel', 'Node.js', 'PHP', 'Redis', 'Octane'],
 	},
 	{
-		key: 'devtools',
+		key: 'Styling',
+		label: 'Backend',
+		items: ['Tailwind', 'CSS', 'SaSS'],
+	},
+	{
+		key: 'Database',
+		label: 'Backend',
+		items: ['MySQL', 'MongoDB', 'PostgreSQL'],
+	},
+	{
+		key: 'Dev tools',
 		label: 'Dev Tools',
-		items: ['docker', 'git', 'stripe'],
+		items: [
+			'Docker',
+			'Git',
+			'GitHub',
+			'Stripe',
+			'Figma',
+			'Vercel',
+			'Postman',
+			'VScode',
+			'Xcode',
+		],
 	},
 ] as const

@@ -22,17 +22,30 @@ export function TechStackDialog() {
             </DialogTrigger>
 
             <DialogContent
-                className="w-[90vw] max-w-xl overflow-hidden rounded-lg border border-line bg-background p-0 shadow-2xl"
+                className="
+    !w-[calc(100vw-2rem)]
+    !max-w-[1100px]
+    overflow-hidden
+    rounded-xl
+    border
+    border-line
+    bg-background
+    p-0
+    shadow-2xl
+  "
                 showCloseButton={false}
             >
-                <div className="flex items-center gap-1.5 border-b border-line bg-tinted px-4 py-2.5">
-                    <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-                    <span className="mx-auto -ml-6 text-xs text-tint">Tech Stack</span>
+                <div className="flex h-14 items-center gap-2 border-b border-line bg-tinted px-5">
+                    <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+                    <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+                    <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+
+                    <span className="absolute left-1/2 -translate-x-1/2 text-sm text-tint">
+                        Tech Stack
+                    </span>
                 </div>
 
-                <div className="max-h-[70vh] overflow-y-auto px-5 py-4">
+                <div className="max-h-[80vh] overflow-y-auto px-6 py-7 sm:px-8 sm:py-8">
                     <TechStackTerminal />
                 </div>
             </DialogContent>
