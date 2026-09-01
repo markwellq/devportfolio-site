@@ -67,12 +67,14 @@ export default async function ProjectPage({
                     href="/projects"
                     className="text-lg text-tint transition-colors hover:text-main"
                 >
-                    <span className="text-main">denoqcore@site\</span>
+                    <span className="text-main">denoqcore@site</span>
                     <span className="text-tint/60">
                         {" "}
-                        ~/projects % \
+                        ~/projects %
                     </span>
-                    {t("back")}
+                    <span className="ml-3">
+                        {t("back")}
+                    </span>
                 </Link>
 
                 <div className="hidden font-body sm:flex">

@@ -10,3 +10,8 @@ export interface Project {
 	githubUrl: string | null
 	content: string
 }
+
+export interface Availability {
+	available: boolean
+	location: string
+}

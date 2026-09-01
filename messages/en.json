@@ -1,5 +1,6 @@
 {
 	"main": {
+		"greeting": "Hello",
 		"role": "Full Stack Web Developer",
 		"description": "I build modern web applications, focusing on performance, clean architecture and great user experience.",
 		"title": "A front-end developer who loves clean code",
@@ -7,7 +8,10 @@
 		"stack": {
 			"title": "Stack"
 		},
-		"show-all": "Show all "
+		"show-all": "Show all ",
+		"content": "my projects",
+		"availableStatus": "available for work — {location}",
+		"unavailableStatus": "not available right now — {location}"
 	},
 
 	"projects": {

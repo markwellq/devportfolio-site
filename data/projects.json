@@ -1,7 +1,7 @@
 [
 	{
 		"slug": "rent-use",
-		"title": "Rent Use",
+		"title": "Rent Use & Booking Platform",
 		"stack": [
 			"Docker",
 			"Laravel",
@@ -16,20 +16,14 @@
 			"Git",
 			"Octane"
 		],
-		"cover": "/projects/rent-use/cover-rent-use.jpg",
+		"cover": "/projects/rent-use/cover-rent_use.jpg",
 		"screenshots": [
-			"/projects/rent-use/screen1.jpg",
-			"/projects/rent-use/screen2.jpg",
-			"/projects/rent-use/screen3.jpg",
-			"/projects/rent-use/screen4.jpg",
-			"/projects/rent-use/screen5.jpg",
-			"/projects/rent-use/screen6.jpg",
-			"/projects/rent-use/screen7.jpg",
-			"/projects/rent-use/screen8.jpg",
-			"/projects/rent-use/screen9.jpg"
+			"/projects/rent-use/rent-use-1.jpg",
+			"/projects/rent-use/rent-use-2.jpg",
+			"/projects/rent-use/rent-use-3.jpg"
 		],
 		"youtubeUrl": "www",
-		"demoUrl": "www",
+		"demoUrl": null,
 		"githubUrl": "https://github.com/markwellq/rent-use"
 	},
 	{
