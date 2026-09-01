@@ -5,6 +5,9 @@ import path from 'path'
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
 const nextConfig: NextConfig = {
+	experimental: {
+		optimizePackageImports: ['@phosphor-icons/react'],
+	},
 	turbopack: {
 		root: path.join(__dirname),
 	},

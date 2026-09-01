@@ -1,4 +1,5 @@
 import { LocaleSwitcher } from "@/components/locale-switcher";
+import { TechStackDialog } from "@/components/tech-stack-dialog";
 import database from "@/data/site.json";
 import { Link } from "@/i18n/navigation";
 import type { Availability } from "@/types/project";
@@ -120,6 +121,10 @@ export default async function HomePage({
             </Link>
           )
         )}
+      </div>
+
+      <div>
+        <TechStackDialog />
       </div>
     </section >
   );

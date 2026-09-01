@@ -1,6 +1,6 @@
 import { getTechIcon } from "@/lib/tech-icons";
 
-export function TechStack({ stack }: { stack: string[] }) {
+export function TechStack({ stack }: { stack: readonly string[] }) {
     return (
         <div className="flex flex-wrap gap-1.5">
             {stack.map((tech) => {
