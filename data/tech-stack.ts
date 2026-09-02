@@ -1,33 +1,27 @@
 export type StackCategory = {
 	key: string
-	label: string
 	items: readonly string[]
 }
 
 export const STACK_CATEGORIES = [
 	{
 		key: 'frontend',
-		label: 'Frontend',
-		items: ['React', 'Next.js', 'Typescript', 'Alpine.js'],
+		items: ['React', 'Next.js', 'TypeScript', 'Alpine.js', 'livewire'],
 	},
 	{
 		key: 'backend',
-		label: 'Backend',
 		items: ['Laravel', 'Node.js', 'PHP', 'Redis', 'Octane'],
 	},
 	{
-		key: 'Styling',
-		label: 'Backend',
-		items: ['Tailwind', 'CSS', 'SaSS'],
+		key: 'database',
+		items: ['MySQL', 'MongoDB', 'PostgreSQL', 'Supabase'],
 	},
 	{
-		key: 'Database',
-		label: 'Backend',
-		items: ['MySQL', 'MongoDB', 'PostgreSQL'],
+		key: 'styling',
+		items: ['Tailwind', 'CSS', 'Sass'],
 	},
 	{
-		key: 'Dev tools',
-		label: 'Dev Tools',
+		key: 'devTools',
 		items: [
 			'Docker',
 			'Git',

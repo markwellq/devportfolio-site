@@ -15,24 +15,16 @@ export function TechStackDialog() {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger
-                className="flex h-8 w-8 items-center justify-center rounded-md border border-line bg-tinted text-tint transition-colors hover:text-main"
+                className="flex items-center gap-1.5 border border-transparent px-3.5 py-1.5 text-sm text-tint transition-colors hover:text-main cursor-pointer"
                 aria-label="show tech stack"
             >
                 <TerminalWindowIcon size={16} />
+                stack
             </DialogTrigger>
 
+
             <DialogContent
-                className="
-    !w-[calc(100vw-2rem)]
-    !max-w-[1100px]
-    overflow-hidden
-    rounded-xl
-    border
-    border-line
-    bg-background
-    p-0
-    shadow-2xl
-  "
+                className="w-[calc(100vw-2rem)]! max-w-275! overflow-hidden rounded-xl border border-line bg-background p-0 shadow-2xl"
                 showCloseButton={false}
             >
                 <div className="flex h-14 items-center gap-2 border-b border-line bg-tinted px-5">
