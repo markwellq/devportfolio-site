@@ -15,7 +15,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 const LINKS = [
   { key: "content", labelKey: "content", href: "/projects", icon: BookIcon, external: false },
   { key: "github", label: "denoqcore", href: "https://github.com/denoqcore", icon: GithubLogoIcon, external: true },
-  { key: "telegram", label: "@markwellxd", href: "https://t.me/markwellxd", icon: TelegramLogoIcon, external: true },
+  { key: "telegram", label: "@markwellxd", href: "https://t.me/markwellq", icon: TelegramLogoIcon, external: true },
 ] as const;
 
 const DOCS = [
@@ -42,7 +42,7 @@ export default async function HomePage({
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-medium tracking-tight text-main">
-            Hello, i'm Denis Beccev
+            {t('greeting')} Denis Beccev
           </h1>
 
           <div className="hidden sm:flex">
@@ -121,11 +121,9 @@ export default async function HomePage({
             </Link>
           )
         )}
-      </div>
-
-      <div>
         <TechStackDialog />
       </div>
+
     </section >
   );
 }

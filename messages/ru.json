@@ -1,7 +1,8 @@
 {
 	"main": {
+		"greeting": "Привет, я",
 		"role": "Full Stack Web Developer",
-		"description": "Я создаю современные веб-приложения, уделяя внимание производительности, чистой архитектуре и удобству использования.",
+		"description": "Личное портфолио — я создаю современные веб-приложения, уделяя внимание производительности, чистой архитектуре и удобству использования.",
 		"title": "Front-end разработчик, который любит чистый код",
 		"back": "назад",
 		"stack": {
@@ -11,6 +12,22 @@
 		"content": "мои проекты",
 		"availableStatus": "открыт к предложениям — {location}",
 		"unavailableStatus": "сейчас недоступен — {location}"
+	},
+
+	"techStack": {
+		"dialogTitle": "Tech Stack",
+		"command": "show tech stack",
+		"columnCategory": "Категория",
+		"columnTechnologies": "Технологии",
+		"loaded": "{count} из {total} стеков загружено успешно ({percentage}%)",
+		"renderTime": "Время рендера: {ms}",
+		"categories": {
+			"frontend": "Frontend",
+			"backend": "Backend",
+			"database": "Database",
+			"styling": "Styling",
+			"devTools": "Dev Tools"
+		}
 	},
 
 	"projects": {

@@ -1,8 +1,8 @@
 {
 	"main": {
-		"greeting": "Hello",
+		"greeting": "Hello, i'm",
 		"role": "Full Stack Web Developer",
-		"description": "I build modern web applications, focusing on performance, clean architecture and great user experience.",
+		"description": "Personal portfolio — I build modern web applications, focusing on performance, clean architecture and great user experience.",
 		"title": "A front-end developer who loves clean code",
 		"back": "back",
 		"stack": {
@@ -12,6 +12,22 @@
 		"content": "my projects",
 		"availableStatus": "available for work — {location}",
 		"unavailableStatus": "not available right now — {location}"
+	},
+
+	"techStack": {
+		"dialogTitle": "Tech Stack",
+		"command": "show tech stack",
+		"columnCategory": "Category",
+		"columnTechnologies": "Technologies",
+		"loaded": "{count} of {total} stacks loaded successfully ({percentage}%)",
+		"renderTime": "Render time: {ms}",
+		"categories": {
+			"frontend": "Frontend",
+			"backend": "Backend",
+			"database": "Database",
+			"styling": "Styling",
+			"devTools": "Dev Tools"
+		}
 	},
 
 	"projects": {
